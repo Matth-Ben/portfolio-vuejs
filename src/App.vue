@@ -71,4 +71,5 @@ footer {
   bottom: 0;
   width: 100%;
 }
+@import "/public/css/index.css"
 </style>
