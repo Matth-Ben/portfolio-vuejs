@@ -1,0 +1,10 @@
+.navbar {
+  display: flex;
+  .navbar-menu {
+    margin-left: auto;
+    .navbar-item {
+      margin: auto 15px;
+      text-decoration: none;
+    }
+  }
+}
