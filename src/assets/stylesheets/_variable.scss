@@ -3,3 +3,28 @@
   max-width: 1440px;
   padding: 25px 15px;
 }
+
+html,
+body {
+  background-color: #151519;
+  color: #F7F7F7;
+}
+
+a {
+  color: #F7F7F7;
+  transition: .3s;
+  &:hover {
+    color: #F4D31D;
+    transition: .3s;
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #F7F7F7;
+  background: #F4D31D;
+}
+
+::selection {
+  color: #F7F7F7;
+  background: #F4D31D;
+}

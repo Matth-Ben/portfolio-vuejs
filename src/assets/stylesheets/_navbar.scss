@@ -1,5 +1,11 @@
 .navbar {
   display: flex;
+  .navbar-brand {
+    font-size: 24px;
+    .navbar-item {
+      text-decoration: none;
+    }
+  }
   .navbar-menu {
     margin-left: auto;
     .navbar-item {

@@ -4,8 +4,119 @@
   padding: 25px 15px;
 }
 
+html,
+body {
+  background-color: #151519;
+  color: #F7F7F7;
+}
+
+a {
+  color: #F7F7F7;
+  transition: 0.3s;
+}
+a:hover {
+  color: #F4D31D;
+  transition: 0.3s;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #F7F7F7;
+  background: #F4D31D;
+}
+
+::selection {
+  color: #F7F7F7;
+  background: #F4D31D;
+}
+
+.c-arrow {
+  height: 50px;
+  width: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.c-arrow:focus {
+  outline: none;
+}
+
+.c-arrow-inner {
+  height: 50px;
+  width: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transform: translateX(-1px);
+  transform: translateX(-1px);
+}
+.c-arrow-inner:after {
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transform: translate(0) rotate(-45deg);
+  transform: translate(0) rotate(-45deg);
+}
+.c-arrow-inner:before {
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transform: translate(0) rotate(45deg);
+  transform: translate(0) rotate(45deg);
+}
+.c-arrow-inner:after, .c-arrow-inner:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 13px;
+  background: #fff;
+}
+
+#template-home .title {
+  font-size: 10vw;
+  text-size-adjust: auto;
+  text-transform: uppercase;
+}
+#template-home .title span {
+  position: relative;
+  z-index: 1;
+}
+#template-home .title span:before {
+  content: "";
+  background-color: #F4D31D;
+  width: 550px;
+  height: 100%;
+  position: absolute;
+  left: -5%;
+  top: -10%;
+  z-index: -1;
+}
+#template-home .subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 3;
+  max-width: 450px;
+  position: absolute;
+  bottom: 15%;
+  left: 12%;
+}
+#template-home .go-down {
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
+}
+
 .navbar {
   display: flex;
+}
+.navbar .navbar-brand {
+  font-size: 24px;
+}
+.navbar .navbar-brand .navbar-item {
+  text-decoration: none;
 }
 .navbar .navbar-menu {
   margin-left: auto;

@@ -1,0 +1,48 @@
+.c-arrow {
+  height: 50px;
+  width: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.c-arrow-inner {
+  height: 50px;
+  width: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transform: translateX(-1px);
+  transform: translateX(-1px);
+
+  &:after {
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform: translate(0) rotate(-45deg);
+    transform: translate(0) rotate(-45deg);
+  }
+
+  &:before {
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform: translate(0) rotate(45deg);
+    transform: translate(0) rotate(45deg);
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 13px;
+    background: #fff;
+  }
+}

@@ -1,0 +1,35 @@
+#template-home {
+  .title {
+    font-size: 10vw;
+    text-size-adjust: auto;
+    text-transform: uppercase;
+    span {
+      position: relative;
+      z-index: 1;
+      &:before {
+        content: '';
+        background-color: #F4D31D;
+        width: 550px;
+        height: 100%;
+        position: absolute;
+        left: -5%;
+        top: -10%;
+        z-index: -1;
+      }
+    }
+  }
+  .subtitle {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 3;
+    max-width: 450px;
+    position: absolute;
+    bottom: 15%;
+    left: 12%;
+  }
+  .go-down {
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+  }
+}
