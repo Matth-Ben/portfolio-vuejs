@@ -1,6 +1,7 @@
 #template-home {
   .title {
     font-size: 10vw;
+    margin-top: auto;
     text-size-adjust: auto;
     text-transform: uppercase;
     span {
@@ -31,5 +32,11 @@
     position: absolute;
     right: 15%;
     bottom: 10%;
+  }
+
+  header {
+    height: 90vh;
+    display: flex;
+    align-items: center;
   }
 }

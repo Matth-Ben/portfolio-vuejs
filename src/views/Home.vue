@@ -1,6 +1,6 @@
 <template>
   <div id="template-home">
-    <div class="header is-cover is-relative is-fullheight-with-navbar is-primary">
+    <header class="header is-cover is-relative is-fullheight-with-navbar is-primary">
       <div class="header-body">
         <div class="container">
           <h1 class="title"><span>Développeur</span><br/>Web Junior</h1>
@@ -12,10 +12,10 @@
           </button>
         </div>
       </div>
-    </div>
+    </header>
     <main class="content">
       <article>
-
+        <h2>À propos</h2>
       </article>
     </main>
   </div>

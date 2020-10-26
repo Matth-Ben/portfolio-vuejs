@@ -19,6 +19,9 @@ a:hover {
   transition: 0.3s;
 }
 
+/***************/
+/****Pointer****/
+/***************/
 ::-moz-selection {
   /* Code for Firefox */
   color: #F7F7F7;
@@ -75,8 +78,50 @@ a:hover {
   background: #fff;
 }
 
+.g-cursor_hide {
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+}
+.g-cursor__circle {
+  pointer-events: none;
+  user-select: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  z-index: 5555;
+  backface-visibility: hidden;
+  transition: opacity 0.6s ease;
+}
+.g-cursor__point {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  user-select: none;
+  border-radius: 100%;
+  background: #fff;
+  z-index: 55555555;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.g-cursor_hover .g-cursor__circle {
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+}
+
 #template-home .title {
   font-size: 10vw;
+  margin-top: auto;
   text-size-adjust: auto;
   text-transform: uppercase;
 }
@@ -107,6 +152,11 @@ a:hover {
   position: absolute;
   right: 15%;
   bottom: 10%;
+}
+#template-home header {
+  height: 90vh;
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
