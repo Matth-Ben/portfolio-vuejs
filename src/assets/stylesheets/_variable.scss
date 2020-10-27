@@ -1,3 +1,6 @@
+/**************************/
+/**********Colors**********/
+/**************************/
 $primary: #FEB41C;
 $secondary: #4B5F6D;
 $secondary-light: #5E7C88;
@@ -5,10 +8,17 @@ $dark: #24221F;
 $dark-light: #363F45;
 $light: #F7F7F7;
 
+/**************************/
+/**********Fonts***********/
+/**************************/
+$noto: 'Noto Serif JP', serif;
+$ubuntu: 'Ubuntu', sans-serif;
+
 html,
 body {
   background-color: $dark;
   color: $light;
+  font-family: $ubuntu;
 }
 
 .content {
@@ -45,4 +55,15 @@ a {
 .img-bg {
   position: absolute;
   z-index: -1;
+}
+
+/*******************/
+/******Display******/
+/*******************/
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
 }

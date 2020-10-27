@@ -1,7 +1,14 @@
+/**************************/
+/**********Colors**********/
+/**************************/
+/**************************/
+/**********Fonts***********/
+/**************************/
 html,
 body {
   background-color: #24221F;
   color: #F7F7F7;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .content {
@@ -38,6 +45,17 @@ a:hover {
 .img-bg {
   position: absolute;
   z-index: -1;
+}
+
+/*******************/
+/******Display******/
+/*******************/
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .c-arrow {
@@ -170,6 +188,7 @@ header {
 }
 header .title-header {
   font-size: 10vw;
+  font-family: "Noto Serif JP", serif;
   margin-top: auto;
   text-size-adjust: auto;
   text-transform: uppercase;
@@ -204,21 +223,33 @@ header .subtitle-header {
   position: relative;
   z-index: 1;
 }
-#about-me .subtitle {
+#about-me .content {
+  margin: 4rem auto;
+  padding: 0;
+}
+#about-me .content .content-about {
+  height: 100vh;
+}
+#about-me .content .content-about .subtitle {
   color: #FEB41C;
 }
-#about-me .img-bg {
-  top: 0;
-  right: 10%;
-}
-#about-me img {
-  max-width: 600px;
-}
-#about-me p.subtitle {
+#about-me .content .content-about p.subtitle {
   max-width: 750px;
 }
-#about-me p.content-text {
+#about-me .content .content-about p.content-text {
   max-width: 550px;
+}
+#about-me .img-bg {
+  display: flex;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background: #363F45;
+  padding: 10%;
+}
+#about-me .img-bg img {
+  margin: auto;
+  max-width: 400px;
 }
 
 .navbar {
