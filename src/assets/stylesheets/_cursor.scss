@@ -1,5 +1,27 @@
-.g-cursor {
+/****************/
+/*****Select*****/
+/****************/
+::-moz-selection { /* Code for Firefox */
+  color: $light;
+  background: $primary;
+}
 
+::selection {
+  color: $light;
+  background: $primary;
+}
+
+html {
+  cursor: none;
+}
+a {
+  cursor: none;
+  &:hover {
+    cursor: none;
+  }
+}
+
+.g-cursor {
   &_hide {
     opacity: 0;
     width: 60px;
@@ -17,7 +39,7 @@
     position: fixed;
     width: 30px;
     height: 30px;
-    border: 2px solid #fff;
+    border: 2px solid $primary;
     border-radius: 100%;
     z-index: 5555;
     backface-visibility: hidden;
@@ -33,7 +55,7 @@
     pointer-events: none;
     user-select: none;
     border-radius: 100%;
-    background: #fff;
+    background: $primary;
     z-index: 55555555;
     backface-visibility: hidden;
     will-change: transform;

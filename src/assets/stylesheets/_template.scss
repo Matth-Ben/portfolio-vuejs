@@ -1,5 +1,8 @@
-#template-home {
-  .title {
+header {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  .title-header {
     font-size: 10vw;
     margin-top: auto;
     text-size-adjust: auto;
@@ -9,7 +12,7 @@
       z-index: 1;
       &:before {
         content: '';
-        background-color: #F4D31D;
+        background-color: $primary;
         width: 550px;
         height: 100%;
         position: absolute;
@@ -19,7 +22,7 @@
       }
     }
   }
-  .subtitle {
+  .subtitle-header {
     font-size: 18px;
     font-weight: normal;
     line-height: 3;
@@ -28,15 +31,29 @@
     bottom: 15%;
     left: 12%;
   }
-  .go-down {
-    position: absolute;
-    right: 15%;
-    bottom: 10%;
-  }
+}
 
-  header {
-    height: 90vh;
-    display: flex;
-    align-items: center;
+#about-me {
+  background: $light;
+  color: $dark;
+  position: relative;
+  z-index: 1;
+  .subtitle {
+    color: $primary;
+  }
+  .img-bg {
+    top: 0;
+    right: 10%;
+  }
+  img {
+    max-width: 600px;
+  }
+  p {
+    &.subtitle {
+      max-width: 750px;
+    }
+    &.content-text {
+      max-width: 550px;
+    }
   }
 }

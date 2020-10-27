@@ -1,11 +1,24 @@
 .c-arrow {
   height: 50px;
-  width: 20px;
-  cursor: pointer;
+  width: 30px;
   background: none;
   border: none;
+  transition: .3s;
   &:focus {
     outline: none;
+  }
+  &:hover {
+    .c-arrow-inner {
+      background: $primary;
+      height: 60px;
+      transition: .3s;
+      &:after,
+      &:before {
+        height: 18px;
+        background: $primary;
+        transition: .3s;
+      }
+    }
   }
 }
 
@@ -20,6 +33,7 @@
   margin: auto;
   -webkit-transform: translateX(-1px);
   transform: translateX(-1px);
+  transition: .3s;
 
   &:after {
     -webkit-transform-origin: bottom;
@@ -44,5 +58,6 @@
     width: 2px;
     height: 13px;
     background: #fff;
+    transition: .3s;
   }
 }

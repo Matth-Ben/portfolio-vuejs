@@ -1,13 +1,13 @@
-#app {
+html,
+body {
+  background-color: #24221F;
+  color: #F7F7F7;
+}
+
+.content {
   margin: auto;
   max-width: 1440px;
   padding: 25px 15px;
-}
-
-html,
-body {
-  background-color: #151519;
-  color: #F7F7F7;
 }
 
 a {
@@ -15,33 +15,50 @@ a {
   transition: 0.3s;
 }
 a:hover {
-  color: #F4D31D;
+  color: #FEB41C;
   transition: 0.3s;
 }
 
-/***************/
-/****Pointer****/
-/***************/
-::-moz-selection {
-  /* Code for Firefox */
-  color: #F7F7F7;
-  background: #F4D31D;
+.go-down {
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
 }
 
-::selection {
-  color: #F7F7F7;
-  background: #F4D31D;
+.title {
+  font-size: 4.5vw;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 2.5vw;
+  letter-spacing: 4px;
+}
+
+.img-bg {
+  position: absolute;
+  z-index: -1;
 }
 
 .c-arrow {
   height: 50px;
-  width: 20px;
-  cursor: pointer;
+  width: 30px;
   background: none;
   border: none;
+  transition: 0.3s;
 }
 .c-arrow:focus {
   outline: none;
+}
+.c-arrow:hover .c-arrow-inner {
+  background: #FEB41C;
+  height: 60px;
+  transition: 0.3s;
+}
+.c-arrow:hover .c-arrow-inner:after, .c-arrow:hover .c-arrow-inner:before {
+  height: 18px;
+  background: #FEB41C;
+  transition: 0.3s;
 }
 
 .c-arrow-inner {
@@ -55,6 +72,7 @@ a:hover {
   margin: auto;
   -webkit-transform: translateX(-1px);
   transform: translateX(-1px);
+  transition: 0.3s;
 }
 .c-arrow-inner:after {
   -webkit-transform-origin: bottom;
@@ -76,6 +94,32 @@ a:hover {
   width: 2px;
   height: 13px;
   background: #fff;
+  transition: 0.3s;
+}
+
+/****************/
+/*****Select*****/
+/****************/
+::-moz-selection {
+  /* Code for Firefox */
+  color: #F7F7F7;
+  background: #FEB41C;
+}
+
+::selection {
+  color: #F7F7F7;
+  background: #FEB41C;
+}
+
+html {
+  cursor: none;
+}
+
+a {
+  cursor: none;
+}
+a:hover {
+  cursor: none;
 }
 
 .g-cursor_hide {
@@ -92,7 +136,7 @@ a:hover {
   position: fixed;
   width: 30px;
   height: 30px;
-  border: 2px solid #fff;
+  border: 2px solid #FEB41C;
   border-radius: 100%;
   z-index: 5555;
   backface-visibility: hidden;
@@ -107,7 +151,7 @@ a:hover {
   pointer-events: none;
   user-select: none;
   border-radius: 100%;
-  background: #fff;
+  background: #FEB41C;
   z-index: 55555555;
   backface-visibility: hidden;
   will-change: transform;
@@ -119,19 +163,24 @@ a:hover {
   transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
 }
 
-#template-home .title {
+header {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+header .title-header {
   font-size: 10vw;
   margin-top: auto;
   text-size-adjust: auto;
   text-transform: uppercase;
 }
-#template-home .title span {
+header .title-header span {
   position: relative;
   z-index: 1;
 }
-#template-home .title span:before {
+header .title-header span:before {
   content: "";
-  background-color: #F4D31D;
+  background-color: #FEB41C;
   width: 550px;
   height: 100%;
   position: absolute;
@@ -139,7 +188,7 @@ a:hover {
   top: -10%;
   z-index: -1;
 }
-#template-home .subtitle {
+header .subtitle-header {
   font-size: 18px;
   font-weight: normal;
   line-height: 3;
@@ -148,15 +197,28 @@ a:hover {
   bottom: 15%;
   left: 12%;
 }
-#template-home .go-down {
-  position: absolute;
-  right: 15%;
-  bottom: 10%;
+
+#about-me {
+  background: #F7F7F7;
+  color: #24221F;
+  position: relative;
+  z-index: 1;
 }
-#template-home header {
-  height: 90vh;
-  display: flex;
-  align-items: center;
+#about-me .subtitle {
+  color: #FEB41C;
+}
+#about-me .img-bg {
+  top: 0;
+  right: 10%;
+}
+#about-me img {
+  max-width: 600px;
+}
+#about-me p.subtitle {
+  max-width: 750px;
+}
+#about-me p.content-text {
+  max-width: 550px;
 }
 
 .navbar {

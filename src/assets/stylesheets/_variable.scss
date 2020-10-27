@@ -1,33 +1,48 @@
-#app {
+$primary: #FEB41C;
+$secondary: #4B5F6D;
+$secondary-light: #5E7C88;
+$dark: #24221F;
+$dark-light: #363F45;
+$light: #F7F7F7;
+
+html,
+body {
+  background-color: $dark;
+  color: $light;
+}
+
+.content {
   margin: auto;
   max-width: 1440px;
   padding: 25px 15px;
 }
 
-html,
-body {
-  background-color: #151519;
-  color: #F7F7F7;
-}
-
 a {
-  color: #F7F7F7;
+  color: $light;
   transition: .3s;
   &:hover {
-    color: #F4D31D;
+    color: $primary;
     transition: .3s;
   }
 }
 
-/***************/
-/****Pointer****/
-/***************/
-::-moz-selection { /* Code for Firefox */
-  color: #F7F7F7;
-  background: #F4D31D;
+.go-down {
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
 }
 
-::selection {
-  color: #F7F7F7;
-  background: #F4D31D;
+.title {
+  font-size: 4.5vw;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 2.5vw;
+  letter-spacing: 4px;
+}
+
+.img-bg {
+  position: absolute;
+  z-index: -1;
 }
