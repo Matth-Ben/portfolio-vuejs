@@ -5,6 +5,7 @@ header {
   .title-header {
     font-size: 10vw;
     font-family: $noto;
+    letter-spacing: 8px;
     margin-top: auto;
     text-size-adjust: auto;
     text-transform: uppercase;
@@ -46,13 +47,16 @@ header {
       height: 100vh;
       .subtitle {
         color: $primary;
+        a {
+          color: #FEB41C;
+        }
       }
       p {
         &.subtitle {
           max-width: 750px;
         }
         &.content-text {
-          max-width: 550px;
+          max-width: 750px;
         }
       }
     }
