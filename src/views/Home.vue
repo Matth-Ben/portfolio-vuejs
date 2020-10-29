@@ -14,12 +14,21 @@
       </div>
     </header>
     <main>
+      <article id="projects">
+        <div class="content">
+          <ul class="list-project">
+            <li class="item-project" v-for="project in projects">
+              <post-card v-bind="project"></post-card>
+            </li>
+          </ul>
+        </div>
+      </article>
       <article id="about-me">
         <div class="content">
           <div class="content-about d-flex align-items-center">
             <div>
-              <p class="subtitle">Je suis un développeur créatif basé sur Lyon, en France. Actuellement en
-                dernière année de mastère au sein de l'entreprise <a href="https://amtsolutions.fr" target="_blank">AMT Solutions</a>.</p>
+              <div class="subtitle">Je suis un développeur créatif basé sur Lyon, en France. Actuellement en
+                dernière année de mastère au sein de l'entreprise <a href="https://amtsolutions.fr" target="_blank">AMT Solutions</a>.</div>
               <p class="content-text">En mes temps perdu, j'aime créer de nouveau projet pour tester de nouvelle techno
                 et voir ou j'en suis dans mes compétences. En dehors du dév, je passe mon temps à jouer
                 aux jeux vidéo avec mes amis, passer du temps avec ces derniers et passer <span>énormémant</span>
@@ -39,7 +48,50 @@
 </template>
 
 <script>
+import ProjectsService from '../services/ProjectsService'
+import PostCard from '../components/PostCard'
 export default {
-  name: 'home'
-}
+  name: 'home',
+  components: {
+    PostCard
+  },
+  data () {
+    return {
+      airtableResponse: []
+    }
+  },
+  mounted: function () {
+    let self = this
+    async function getProjects() {
+      try{
+        const response = await ProjectsService.getProjects()
+        console.log(response)
+        self.airtableResponse = response.data.records
+
+      }catch(err){
+        console.log(err)
+      }
+    }
+    getProjects()
+  },
+  computed: {
+    projects(){
+      let self = this
+      let projectList = []
+      for (var i = 0; i < self.airtableResponse.length; i++) {
+        if (self.airtableResponse[i].fields.Published){
+          let project = {
+            title: self.airtableResponse[i].fields.Title,
+            date: self.airtableResponse[i].fields["Date Published"],
+            snippet: self.airtableResponse[i].fields.Excerpt,
+            image: self.airtableResponse[i].fields.Image[0].url,
+            slug: self.airtableResponse[i].fields.slug
+          }
+          projectList.push(project)
+        }
+      }
+      return projectList
+    }
+  }
+};
 </script>

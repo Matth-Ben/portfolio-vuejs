@@ -15,7 +15,6 @@
         </div>
         <div class="content">
           <p>{{snippet}}</p>
-          <router-link :to="'/project/'+slug" class="button is-fullwidth">View Project</router-link>
         </div>
       </div>
     </div>

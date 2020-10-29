@@ -9,6 +9,7 @@ body {
   background-color: #24221F;
   color: #F7F7F7;
   font-family: "Ubuntu", sans-serif;
+  letter-spacing: 3px;
 }
 
 .content {
@@ -24,6 +25,10 @@ a {
 a:hover {
   color: #FEB41C;
   transition: 0.3s;
+}
+
+p {
+  line-height: 32px;
 }
 
 .go-down {
@@ -237,8 +242,11 @@ header .subtitle-header {
 #about-me .content .content-about .subtitle a {
   color: #FEB41C;
 }
-#about-me .content .content-about p.subtitle {
-  max-width: 750px;
+#about-me .content .content-about div {
+  margin-bottom: 45px;
+}
+#about-me .content .content-about div.subtitle {
+  max-width: 850px;
 }
 #about-me .content .content-about p.content-text {
   max-width: 750px;
@@ -254,6 +262,11 @@ header .subtitle-header {
 #about-me .img-bg img {
   margin: auto;
   max-width: 400px;
+}
+#about-me .tome-number .m-number {
+  display: block;
+  font-size: 42px;
+  margin-top: 20px;
 }
 
 .navbar {
