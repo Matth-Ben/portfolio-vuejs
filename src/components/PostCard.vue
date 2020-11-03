@@ -1,29 +1,13 @@
 <template>
-  <div class="post-card">
-    <div class="card">
-      <div class="card-image">
-        <figure class="image is-square">
-          <img :src="image" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-content">
-            <p class="title is-4">{{title}}</p>
-            <p class="subtitle is-6">{{date}}</p>
-          </div>
-        </div>
-        <div class="content">
-          <p>{{snippet}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <router-link :to="'/project/'+slug" class="button is-fullwidth">
+    <h3 class="projects-item-title">{{title}}</h3>
+    <span class="projects-item-line"></span>
+  </router-link>
 </template>
 
 <script>
 export default {
-  name: "PostCard",
+  name: 'PostCard',
   props: {
     title: String,
     date: String,
@@ -31,5 +15,5 @@ export default {
     image: String,
     slug: String
   }
-};
+}
 </script>
