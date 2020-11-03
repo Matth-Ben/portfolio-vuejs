@@ -1,10 +1,10 @@
 header {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   .title-header {
     font-size: 10vw;
-    font-family: $noto;
+    font-family: $ibm;
     letter-spacing: 8px;
     margin-top: auto;
     text-size-adjust: auto;
@@ -27,11 +27,71 @@ header {
   .subtitle-header {
     font-size: 18px;
     font-weight: normal;
-    line-height: 3;
+    line-height: 2.2;
     max-width: 450px;
     position: absolute;
-    bottom: 15%;
+    bottom: 12.5%;
     left: 12%;
+  }
+}
+
+#projects {
+  position: relative;
+  .list-project {
+    .item-project {
+      display: block;
+      margin: 20px auto;
+      list-style: none;
+      a {
+        text-decoration: none;
+        &:hover {
+          .projects-item-title {
+            color: $primary;
+            transition: .4s;
+          }
+          .projects-item-line {
+            &:before {
+              background: $primary;
+              -webkit-transform: scaleX(1) translateZ(0);
+              transform: scaleX(1) translateZ(0);
+            }
+          }
+        }
+      }
+      .projects-item-title {
+        color: $secondary;
+        display: table-cell;
+        font-size: 4vw;
+        text-transform: uppercase;
+        transition: .4s;
+        white-space: nowrap;
+        position: relative;
+      }
+      .projects-item-line {
+        display: table-cell;
+        position: relative;
+        width: 100%;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          width: calc(100% - 20px);
+          height: 15px;
+          margin-top: -5px;
+          background: $secondary;
+          opacity: 1;
+          -webkit-transform-origin: left;
+          transform-origin: left;
+          -webkit-transform: scaleX(0) translateZ(0);
+          transform: scaleX(0) translateZ(0);
+          -webkit-transition: opacity 1.8s cubic-bezier(.165,.84,.44,1),-webkit-transform 1.8s cubic-bezier(.165,.84,.44,1);
+          transition: opacity 1.8s cubic-bezier(.165,.84,.44,1),-webkit-transform 1.8s cubic-bezier(.165,.84,.44,1);
+          transition: opacity 1.8s cubic-bezier(.165,.84,.44,1),transform 1.8s cubic-bezier(.165,.84,.44,1);
+          transition: opacity 1.8s cubic-bezier(.165,.84,.44,1),transform 1.8s cubic-bezier(.165,.84,.44,1),-webkit-transform 1.8s cubic-bezier(.165,.84,.44,1);
+        }
+      }
+    }
   }
 }
 

@@ -11,7 +11,7 @@ $light: #F7F7F7;
 /**************************/
 /**********Fonts***********/
 /**************************/
-$noto: 'Noto Serif JP', serif;
+$ibm: 'IBM Plex Sans Condensed', serif;
 $ubuntu: 'Ubuntu', sans-serif;
 
 html,
@@ -31,6 +31,7 @@ body {
 a {
   color: $light;
   transition: .3s;
+  text-decoration: none;
   &:hover {
     color: $primary;
     transition: .3s;
@@ -60,6 +61,35 @@ p {
 .img-bg {
   position: absolute;
   z-index: -1;
+}
+
+.link-underline {
+  position: relative;
+  &:hover {
+    &:before {
+      -webkit-transform: scaleX(1) translateZ(0);
+      transform: scaleX(1) translateZ(0);
+    }
+  }
+  &:before {
+    content: '';
+    background: $secondary;
+    height: 25px;
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -5px;
+    margin-left: -10px;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: scaleX(0) translateZ(0);
+    transform: scaleX(0) translateZ(0);
+    -webkit-transition: opacity .8s cubic-bezier(.165,.84,.44,1),-webkit-transform .8s cubic-bezier(.165,.84,.44,1);
+    transition: opacity .8s cubic-bezier(.165,.84,.44,1),-webkit-transform .8s cubic-bezier(.165,.84,.44,1);
+    transition: opacity .8s cubic-bezier(.165,.84,.44,1),transform .8s cubic-bezier(.165,.84,.44,1);
+    transition: opacity .8s cubic-bezier(.165,.84,.44,1),transform .8s cubic-bezier(.165,.84,.44,1),-webkit-transform .8s cubic-bezier(.165,.84,.44,1);
+    z-index: -1;
+  }
 }
 
 /*******************/

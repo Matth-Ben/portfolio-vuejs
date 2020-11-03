@@ -21,6 +21,7 @@ body {
 a {
   color: #F7F7F7;
   transition: 0.3s;
+  text-decoration: none;
 }
 a:hover {
   color: #FEB41C;
@@ -49,6 +50,33 @@ p {
 
 .img-bg {
   position: absolute;
+  z-index: -1;
+}
+
+.link-underline {
+  position: relative;
+}
+.link-underline:hover:before {
+  -webkit-transform: scaleX(1) translateZ(0);
+  transform: scaleX(1) translateZ(0);
+}
+.link-underline:before {
+  content: "";
+  background: #4B5F6D;
+  height: 25px;
+  width: calc(100% - 20px);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -5px;
+  margin-left: -10px;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transform: scaleX(0) translateZ(0);
+  transform: scaleX(0) translateZ(0);
+  -webkit-transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   z-index: -1;
 }
 
@@ -187,13 +215,13 @@ a:hover {
 }
 
 header {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
 header .title-header {
   font-size: 10vw;
-  font-family: "Noto Serif JP", serif;
+  font-family: "IBM Plex Sans Condensed", serif;
   letter-spacing: 8px;
   margin-top: auto;
   text-size-adjust: auto;
@@ -216,11 +244,65 @@ header .title-header span:before {
 header .subtitle-header {
   font-size: 18px;
   font-weight: normal;
-  line-height: 3;
+  line-height: 2.2;
   max-width: 450px;
   position: absolute;
-  bottom: 15%;
+  bottom: 12.5%;
   left: 12%;
+}
+
+#projects {
+  position: relative;
+}
+#projects .list-project .item-project {
+  display: block;
+  margin: 20px auto;
+  list-style: none;
+}
+#projects .list-project .item-project a {
+  text-decoration: none;
+}
+#projects .list-project .item-project a:hover .projects-item-title {
+  color: #FEB41C;
+  transition: 0.4s;
+}
+#projects .list-project .item-project a:hover .projects-item-line:before {
+  background: #FEB41C;
+  -webkit-transform: scaleX(1) translateZ(0);
+  transform: scaleX(1) translateZ(0);
+}
+#projects .list-project .item-project .projects-item-title {
+  color: #4B5F6D;
+  display: table-cell;
+  font-size: 4vw;
+  text-transform: uppercase;
+  transition: 0.4s;
+  white-space: nowrap;
+  position: relative;
+}
+#projects .list-project .item-project .projects-item-line {
+  display: table-cell;
+  position: relative;
+  width: 100%;
+}
+#projects .list-project .item-project .projects-item-line:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: calc(100% - 20px);
+  height: 15px;
+  margin-top: -5px;
+  background: #4B5F6D;
+  opacity: 1;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transform: scaleX(0) translateZ(0);
+  transform: scaleX(0) translateZ(0);
+  -webkit-transition: opacity 1.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 1.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 1.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 1.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #about-me {
