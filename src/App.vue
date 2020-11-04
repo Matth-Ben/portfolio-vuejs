@@ -11,13 +11,6 @@
       <div :style="cursorCircle" class="g-cursor__circle"></div>
       <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
     </div>
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          Built by Mark Johnson with Vue.js, Bulma, and Airtable.
-        </p>
-      </div>
-    </footer>
   </div>
 </template>
 

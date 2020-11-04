@@ -35,29 +35,11 @@ header {
   }
 }
 
-.projects-bloc-title,
-.about-bloc-title,
-.contact-bloc-title {
-  position: absolute;
-  left: 0;
-  top: 90px;
-  transform: rotate(-90deg);
-  h6 {
-    color: $secondary;
-    font-size: 15px;
-    letter-spacing: 6px;
-  }
-}
-
-.about-bloc-title {
-  left: -30px;
-  h6 {
-    color: $dark;
-  }
-}
-
 #projects {
   position: relative;
+  .content {
+    padding: 65px 15px;
+  }
   .list-project {
     .item-project {
       display: block;
@@ -129,7 +111,6 @@ header {
         }
       }
       div {
-        margin-bottom: 45px;
         &.subtitle {
           max-width: 850px;
         }
@@ -156,6 +137,7 @@ header {
   .tome-number {
     .m-number {
       display: block;
+      font-family: $ibm;
       font-size: 42px;
       margin-top: 20px;
     }
@@ -167,34 +149,104 @@ header {
   .content {
     margin: auto;
     max-width: 450px;
+    padding: 65px 15px;
     .contact-content {
-      .contact-content-site {
-        .contact-content-site-block {
-          margin-right: 20px;
-          margin-left: 20px;
+      h2 {
+        font-family: $ibm;
+        letter-spacing: 4px;
+        .link-underline {
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+          &:before {
+            bottom: 5px;
+            height: 15px;
+            width: 100%;
+          }
         }
-        h4 {
-          margin-block-start: 0;
-          margin-block-end: 0;
-        }
-        a {
-          padding: 10px 0;
-          text-transform: uppercase;
-        }
-        .fab {
-          margin-right: 10px;
-        }
-        p {
-          color: $secondary;
-          font-size: 14px;
-          font-weight: 400;
-          letter-spacing: -.014em;
-          line-height: 1.3;
-          margin-block-start: 10px;
-          margin-block-end: 40px;
-          padding-left: 30px;
+      }
+      .row {
+        margin-top: 50px;
+        .contact-content-site {
+          position: relative;
+          z-index: 1;
+          .contact-content-site-block {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-column-gap: 1.3rem;
+            padding-right: 25px;
+            text-transform: uppercase;
+            .fab {
+              width: .6rem;
+              grid-row: 1/span 2;
+            }
+            h4 {
+              margin-block-start: 0;
+              margin-block-end: 0;
+              &:before {
+                content: '';
+                background: $secondary;
+                height: 15px;
+                width: calc(100% - 40px);
+                position: absolute;
+                top: 10px;
+                margin-bottom: -5px;
+                margin-left: -10px;
+                -webkit-transform-origin: left;
+                transform-origin: left;
+                -webkit-transform: scaleX(0) translateZ(0);
+                transform: scaleX(0) translateZ(0);
+                -webkit-transition: opacity .8s cubic-bezier(.165,.84,.44,1),-webkit-transform .8s cubic-bezier(.165,.84,.44,1);
+                transition: opacity .8s cubic-bezier(.165,.84,.44,1),transform .8s cubic-bezier(.165,.84,.44,1),-webkit-transform .8s cubic-bezier(.165,.84,.44,1);
+                z-index: -1;
+              }
+            }
+            p {
+              color: $secondary;
+              font-size: 14px;
+              font-weight: 400;
+              letter-spacing: -.014em;
+              line-height: 1.3;
+              text-transform: initial;
+              margin-block-start: 10px;
+              margin-block-end: 40px;
+            }
+            &:hover {
+              h4 {
+                &:before {
+                  -webkit-transform: scaleX(1) translateZ(0);
+                  transform: scaleX(1) translateZ(0);
+                }
+              }
+            }
+          }
         }
       }
     }
   }
+}
+
+.projects-bloc-title,
+.about-bloc-title,
+.contact-bloc-title {
+  position: absolute;
+  left: 0;
+  top: 90px;
+  transform: rotate(-90deg);
+  h6 {
+    color: $secondary;
+    font-size: 15px;
+    letter-spacing: 6px;
+  }
+}
+
+.about-bloc-title {
+  left: -30px;
+  h6 {
+    color: $dark;
+  }
+}
+
+.contact-bloc-title {
+  left: 22px;
 }

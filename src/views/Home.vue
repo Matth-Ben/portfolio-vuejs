@@ -7,9 +7,9 @@
           <h2 class="subtitle-header">
             Développeur Web Front & Back End, passioné de Design et étudiant en Mastère Manager Informatique.
           </h2>
-          <button class="go-down c-arrow">
-            <div class="c-arrow-inner"></div>
-          </button>
+<!--          <button class="go-down c-arrow">-->
+<!--            <div class="c-arrow-inner"></div>-->
+<!--          </button>-->
         </div>
       </div>
     </header>
@@ -39,8 +39,10 @@
                 et voir ou j'en suis dans mes compétences. En dehors du dév, je passe mon temps à jouer
                 aux jeux vidéo avec mes amis, passer du temps avec ces derniers et passer <span>énormémant</span>
                 de temps à ma passion que n'est autre que les Mangas.</p>
-              <div class="tome-number">
-                <p>Manga actuellement possédé :<span class="m-number">326</span></p>
+              <div class="row">
+                <div class="col-12 col-md-4 tome-number">
+                  <p>Manga actuellement possédé :<span class="m-number link-underline">326</span></p>
+                </div>
               </div>
             </div>
           </div>
@@ -55,27 +57,30 @@
         </div>
         <div class="content">
           <div class="contact-content">
-            <p>I'm most active and reachable <a href="mailto:m.benoit0702@gmail.com">via email</a>.</p>
+            <h2>I'm most active and reachable <a class="link-underline" href="https://twitter.com/MBenoit0702" target="_blank">on Twitter</a> or <a class="link-underline" href="mailto:m.benoit0702@gmail.com">via email</a>.</h2>
             <div class="row">
               <div class="col-12 col-md-6 contact-content-site">
-                <div class="contact-content-site-block">
-                  <h4 class="link-underline"><a href=""><i class="fab fa-twitter"></i>Twitter</a></h4>
+                <a class="contact-content-site-block" href="https://twitter.com/MBenoit0702" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                  <h4>Twitter</h4>
                   <p>Home of the majority of my social sharing about new projects progress, new tech, and killer puns.</p>
-                </div>
+                </a>
               </div>
               <div class="col-12 col-md-6 contact-content-site">
-                <div class="contact-content-site-block">
-                  <h4 class="link-underline"><a href=""><i class="fab fa-github"></i>Github</a></h4>
+                <a class="contact-content-site-block" href="https://github.com/Matth-Ben" target="_blank">
+                  <i class="fab fa-github"></i>
+                  <h4>Github</h4>
                   <p>
                     Open-source contributions and shared projects. Most of my personal projects are public repos here!
                   </p>
-                </div>
+                </a>
               </div>
               <div class="col-12 col-md-6 contact-content-site">
-                <div class="contact-content-site-block">
-                  <h4 class="link-underline"><a href=""><i class="fab fa-linkedin-in"></i>Linkedin</a></h4>
+                <a class="contact-content-site-block" href="https://www.linkedin.com/in/matthias-benoit-25b47812a/" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                  <h4>Linkedin</h4>
                   <p>For demos of new tech explorations, animation, and interaction.</p>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -130,5 +135,5 @@ export default {
       return projectList
     }
   }
-};
+}
 </script>
