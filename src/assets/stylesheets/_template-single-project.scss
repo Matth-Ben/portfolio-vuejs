@@ -1,0 +1,111 @@
+#single-project {
+  #single-project-header {
+    position: relative;
+    width: 100%;
+    .single-project-header-return-back {
+      position: fixed;
+      top: 10%;
+      left: 5%;
+      .fas {
+        font-size: 3rem;
+        color: $secondary;
+      }
+    }
+    .single-project-header-block {
+      display: flex;
+      height: 80vh;
+      align-items: center;
+      .single-project-header-block-title {
+        font-size: 10vw;
+        font-family: $ibm;
+        letter-spacing: 8px;
+        margin: auto;
+        position: relative;
+        text-size-adjust: auto;
+        text-transform: uppercase;
+        z-index: 1;
+        &:before {
+          content: '';
+          background: $primary;
+          height: 50%;
+          width: calc(100% - 20px);
+          position: absolute;
+          bottom: 0;
+          margin-left: -20px;
+          -webkit-transform-origin: left;
+          transform-origin: left;
+          -webkit-transform: scaleX(1) translateZ(0);
+          transform: scaleX(1) translateZ(0);
+          transition-timing-function: ease;
+          z-index: -1;
+        }
+      }
+      .single-project-header-block-type {
+        font-size: 22px;
+        margin: 5% auto;
+      }
+    }
+  }
+  #single-project-body {
+    .single-project-body-title {
+      font-size: 2.3rem;
+      text-transform: uppercase;
+    }
+    #single-project-body-concept,
+    #single-project-body-development,
+    #single-project-body-testimony {
+      background: $light;
+      color: $dark;
+      padding: 75px 0;
+      .text-underline {
+        &:before {
+          height: 25px;
+          top: 20px;
+        }
+      }
+    }
+    #single-project-body-previews {
+      padding: 5vw 0;
+      .row {
+        width: 76.666%;
+        margin: 0 auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        div {
+          max-width: 47.5543%;
+          &:nth-child(2n) {
+            margin-top: 15%;
+          }
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+          vertical-align: middle;
+          width: 100%;
+        }
+      }
+    }
+  }
+  #single-project-back {
+    padding: 75px 0;
+    .d-flex {
+      align-items: center;
+      justify-content: center;
+    }
+    .back-btn {
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      color: $primary;
+      &:before {
+        background: $primary;
+      }
+      &:hover {
+        color: $light;
+      }
+    }
+  }
+}

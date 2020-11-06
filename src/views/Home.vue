@@ -124,9 +124,6 @@ export default {
         if (self.airtableResponse[i].fields.Published) {
           let project = {
             title: self.airtableResponse[i].fields.Title,
-            date: self.airtableResponse[i].fields['Date Published'],
-            snippet: self.airtableResponse[i].fields.Excerpt,
-            image: self.airtableResponse[i].fields.Image[0].url,
             slug: self.airtableResponse[i].fields.slug
           }
           projectList.push(project)
