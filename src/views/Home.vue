@@ -26,26 +26,26 @@
           </ul>
         </div>
       </article>
-      <article id="about-me">
+      <article id="about-me" class="d-flex">
         <div class="about-bloc-title">
           <h6>A propos de moi</h6>
         </div>
-        <div class="content">
-          <div class="content-about d-flex align-items-center">
-            <div>
-              <div class="subtitle">Je suis un développeur créatif basé sur Lyon, en France. Actuellement en
-                dernière année de mastère au sein de l'entreprise <a class="link-underline" href="https://amtsolutions.fr" target="_blank">AMT Solutions</a>.</div>
-              <p class="content-text">En mes temps perdu, j'aime créer de nouveau projet pour tester de nouvelle techno
-                et voir ou j'en suis dans mes compétences. En dehors du dév, je passe mon temps à jouer
-                aux jeux vidéo avec mes amis, passer du temps avec ces derniers et passer <span>énormémant</span>
-                de temps à ma passion que n'est autre que les Mangas.</p>
-              <div class="row">
-                <div class="col-12 col-md-4 tome-number">
-                  <p>Manga actuellement possédé :<span class="m-number link-underline">326</span></p>
-                </div>
+        <div class="content-about align-items-center">
+          <div class="about-me-content-block">
+            <div class="subtitle">Je suis un développeur créatif basé sur Lyon, en France. Actuellement en
+              dernière année de mastère au sein de l'entreprise <a class="link-underline" href="https://amtsolutions.fr" target="_blank">AMT Solutions</a>.</div>
+            <p class="content-text">En mes temps perdu, j'aime créer de nouveau projet pour tester de nouvelle techno
+              et voir ou j'en suis dans mes compétences. En dehors du dév, je passe mon temps à jouer
+              aux jeux vidéo avec mes amis, passer du temps avec ces derniers et passer <span>énormémant</span>
+              de temps à ma passion que n'est autre que les Mangas.</p>
+            <div class="row">
+              <div class="col-12 col-md-4 tome-number">
+                <p>Manga actuellement possédé :<span class="m-number link-underline">326</span></p>
               </div>
             </div>
           </div>
+        </div>
+        <div class="about-me-image-block">
           <div class="img-bg">
             <img src="../public/images/test-img-about.jpg" />
           </div>

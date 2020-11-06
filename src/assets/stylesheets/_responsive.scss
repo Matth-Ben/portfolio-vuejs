@@ -4,6 +4,32 @@
     max-width: 80%;
     padding: 25px 15px;
   }
+
+  #about-me {
+    .content-about {
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 981px){
+  #about-me {
+    display: block;
+    .content-about {
+      margin-left: 17%;
+      width: calc(100% - 17%);
+      .about-me-content-block {
+        margin-right: 17%;
+        width: calc(100% - 17%);
+        .subtitle {
+          width: 100%;
+        }
+      }
+    }
+    .about-me-image-block {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 767px){
@@ -33,6 +59,11 @@
     position: relative;
     transform: none;
   }
+  .contact-bloc-title,
+  .about-bloc-title {
+    left: 0;
+  }
+
   #single-project {
     #single-project-header {
       .single-project-header-block {
@@ -93,6 +124,15 @@
         .projects-item-title {
           font-size: 2rem;
           max-width: 100%;
+        }
+      }
+    }
+  }
+  #about-me {
+    .content-about {
+      .about-me-content-block {
+        .subtitle {
+          font-size: 1.2rem;
         }
       }
     }

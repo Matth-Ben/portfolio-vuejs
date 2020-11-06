@@ -64,7 +64,7 @@ header {
       .projects-item-title {
         color: $secondary;
         display: table-cell;
-        font-size: 5rem;
+        font-size: 5vw;
         text-transform: uppercase;
         transition: .4s;
         white-space: nowrap;
@@ -101,33 +101,44 @@ header {
   color: $dark;
   position: relative;
   z-index: 1;
-  .content {
-    .content-about {
-      height: 90vh;
+  .content-about {
+    padding: 75px 0;
+    width: calc(50% - 11%);
+    margin-left: 11%;
+    .about-me-content-block {
+      width: 70%;
       .subtitle {
-        color: $primary;
-        a {
-          color: #FEB41C;
-        }
+        font-size: 2.5vw;
+        width: 150%;
       }
-      div {
-        &.subtitle {
-          max-width: 850px;
-        }
+    }
+    .subtitle {
+      color: $primary;
+      a {
+        color: #FEB41C;
       }
-      p {
-        &.content-text {
-          max-width: 750px;
-        }
+    }
+    div {
+      &.subtitle {
+        max-width: 850px;
+      }
+    }
+    p {
+      &.content-text {
+        max-width: 750px;
       }
     }
   }
-  .img-bg {
-    display: flex;
-    bottom: 0;
-    top: 0;
-    right: 0;
+  .about-me-image-block {
+    align-items: center;
     background: $dark-light;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+  }
+  .img-bg {
     padding: 10%;
     img {
       margin: auto;
