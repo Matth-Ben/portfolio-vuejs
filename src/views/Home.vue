@@ -32,14 +32,12 @@
         </div>
         <div class="content-about align-items-center">
           <div class="about-me-content-block">
-            <div class="subtitle">Je suis un développeur créatif basé sur Lyon, en France. Actuellement en
+            <div class="subtitle">Nommé Matthias BENOIT, je suis développeur créatif basé sur Lyon. Actuellement en
               dernière année de mastère au sein de l'entreprise <a class="link-underline" href="https://amtsolutions.fr" target="_blank">AMT Solutions</a>.</div>
-            <p class="content-text">En mes temps perdu, j'aime créer de nouveau projet pour tester de nouvelle techno
-              et voir ou j'en suis dans mes compétences. En dehors du dév, je passe mon temps à jouer
-              aux jeux vidéo avec mes amis, passer du temps avec ces derniers et passer <span>énormémant</span>
-              de temps à ma passion que n'est autre que les Mangas.</p>
+            <p class="content-text">En mes temps perdus, j'aime créer de nouveau projet pour tester de nouvelle techno et voir ou j'en suis dans mes compétences.
+            En dehors du dév, je passe mon temps à jouer aux jeux vidéo avec mes amis et à vivre ma passion qui n'est autre que l'univers des Mangas et des Animés.</p>
             <div class="row">
-              <div class="col-12 col-md-4 tome-number">
+              <div class="col-12 col-md-6 tome-number">
                 <p>Manga actuellement possédé :<span class="m-number link-underline">326</span></p>
               </div>
             </div>
@@ -47,7 +45,7 @@
         </div>
         <div class="about-me-image-block">
           <div class="img-bg">
-            <img src="../public/images/test-img-about.jpg" />
+            <img src="../public/images/photo_profil.jpg" />
           </div>
         </div>
       </article>
@@ -57,13 +55,15 @@
         </div>
         <div class="content">
           <div class="contact-content">
-            <h2>I'm most active and reachable <a class="link-underline" href="https://twitter.com/MBenoit0702" target="_blank">on Twitter</a> or <a class="link-underline" href="mailto:m.benoit0702@gmail.com">via email</a>.</h2>
+            <h2>Je suis le plus actif et joignable sur <a class="link-underline" href="https://twitter.com/BenoitMatthias" target="_blank">Twitter</a> ou <a class="link-underline" href="mailto:m.benoit0702@gmail.com">via email</a>.</h2>
             <div class="row">
               <div class="col-12 col-md-6 contact-content-site">
-                <a class="contact-content-site-block" href="https://twitter.com/MBenoit0702" target="_blank">
+                <a class="contact-content-site-block" href="https://twitter.com/BenoitMatthias" target="_blank">
                   <i class="fab fa-twitter"></i>
                   <h4>Twitter</h4>
-                  <p>Home of the majority of my social sharing about new projects progress, new tech, and killer puns.</p>
+                  <p>
+                    Accueil la majorité de mes partages sociaux sur l'avancement de nouveaux projets et les nouvelles technologies.
+                  </p>
                 </a>
               </div>
               <div class="col-12 col-md-6 contact-content-site">
@@ -71,7 +71,7 @@
                   <i class="fab fa-github"></i>
                   <h4>Github</h4>
                   <p>
-                    Open-source contributions and shared projects. Most of my personal projects are public repos here!
+                    Plateforme de partage de la plupart de mes projets personnels qui sont des dépôts publics !
                   </p>
                 </a>
               </div>
@@ -79,7 +79,9 @@
                 <a class="contact-content-site-block" href="https://www.linkedin.com/in/matthias-benoit-25b47812a/" target="_blank">
                   <i class="fab fa-linkedin-in"></i>
                   <h4>Linkedin</h4>
-                  <p>For demos of new tech explorations, animation, and interaction.</p>
+                  <p>
+                    Le réseaux qui me permet de créer mon réseaux et de partager des points de vue.
+                  </p>
                 </a>
               </div>
             </div>

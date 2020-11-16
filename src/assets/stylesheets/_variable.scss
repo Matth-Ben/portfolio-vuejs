@@ -133,6 +133,7 @@ p {
 }
 
 .link-underline {
+  display: inline-block;
   position: relative;
   z-index: 1;
   &:hover {
