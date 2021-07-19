@@ -7,7 +7,7 @@ const Axios = axios.create({
 Axios.defaults.headers.common = {'Authorization': `Bearer keygFHin7wgEG0SBU`}
 
 export default{
-  getProjects() {
+  getProjects () {
     return Axios.get()
   },
 

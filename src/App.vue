@@ -7,7 +7,7 @@
       </div>
     </nav>
     <router-view />
-    <div :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
+    <div :class="[ 'g-cursor', { 'g-cursor_hover': hover } ]">
       <div :style="cursorCircle" class="g-cursor__circle"></div>
       <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
     </div>

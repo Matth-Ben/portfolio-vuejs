@@ -36,7 +36,7 @@
         </div>
       </div>
       <div id="single-project-body-preview" v-if="!!project.imgAllPage">
-        <div v-for="image in project.imgAllPage">
+        <div v-for="image in project.imgAllPage" v-bind="image.id">
           <img style="width: 100%" :src="image.url"/>
         </div>
       </div>
@@ -54,7 +54,7 @@
       </div>
       <div id="single-project-body-previews" v-if="!!project.imgFullPages">
         <div class="row">
-          <div v-for="image in project.imgFullPages">
+          <div v-for="image in project.imgFullPages" v-bind="image.id">
             <img :src="image.url"/>
           </div>
         </div>
