@@ -1,3 +1,14 @@
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: scaleX(0) translateZ(0);
+    transform: scaleX(0) translateZ(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1) translateZ(0);
+    transform: scaleX(1) translateZ(0);
+  }
+}
+
 header {
   height: 100vh;
   display: flex;
@@ -20,6 +31,11 @@ header {
         position: absolute;
         left: -5%;
         top: -10%;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        -webkit-transition: opacity .8s cubic-bezier(.165,.84,.44,1),-webkit-transform .8s cubic-bezier(.165,.84,.44,1);
+        transition: opacity .8s cubic-bezier(.165,.84,.44,1),transform .8s cubic-bezier(.165,.84,.44,1),-webkit-transform .8s cubic-bezier(.165,.84,.44,1);
         z-index: -1;
       }
     }

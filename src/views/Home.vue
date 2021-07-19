@@ -3,7 +3,9 @@
     <header class="header is-cover is-relative is-fullheight-with-navbar is-primary">
       <div class="content">
         <div class="header-body">
-          <h1 class="title-header"><span>Développeur</span><br/>web</h1>
+          <h1 class="title-header">
+            <span>Développeur</span><br/>web
+          </h1>
           <h2 class="subtitle-header">
             Développeur Web Front & Back End, passioné de Design et en recherche d'un poste d'ingénieur logiciel sur Lyon.
           </h2>
